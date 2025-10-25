@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Sri Harsha Reddy Kapuluru - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            padding-top: 80px;
+            background-image: url('https://github.com/user-attachments/assets/cc758865-c21a-4584-992f-c130e5f65ec9');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.85);
+            z-index: -1;
+            animation: roboPulse 6s infinite ease-in-out;
+        }
+        @keyframes roboPulse {
+            0% { transform: scale(1); opacity: 0.85; }
+            50% { transform: scale(1.02); opacity: 0.9; }
+            100% { transform: scale(1); opacity: 0.85; }
+        }
+        .navbar {
+            background: linear-gradient(90deg, #1a2a44, #2c3e50);
+            padding: 1.2rem 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 2rem;
+            color: #ffffff !important;
+            letter-spacing: 1px;
+        }
+        .nav-link {
+            color: #ffffff !important;
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin: 0 15px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #00aaff !important;
+            transform: scale(1.1);
+        }
+        .hero-section {
+            background: linear-gradient(135deg, rgba(0, 170, 255, 0.8), rgba(142, 68, 173, 0.8)), url('https://github.com/user-attachments/assets/cc758865-c21a-4584-992f-c130e5f65ec9');
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .hero-section p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+        }
+        .section {
+            padding: 100px 0;
+        }
+        .section h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: #1a2a44;
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            background: linear-gradient(145deg, #ffffff, #f0f4f8);
+            overflow: hidden;
+        }
+        .card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 10px 30px rgba(0, 170, 255, 0.3);
+        }
+        .card-body {
+            padding: 2rem;
+        }
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a2a44;
+        }
+        .card-text {
+            font-size: 1rem;
+            color: #555;
+        }
+        .btn-primary {
+            background: linear-gradient(45deg, #00aaff, #0077cc);
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #0077cc, #0055aa);
+            transform: scale(1.05);
+        }
+        footer {
+            background: linear-gradient(90deg, #1a2a44, #2c3e50);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #00aaff;
+            transform: scale(1.2);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            .hero-section p {
+                font-size: 1rem;
+            }
+            .section h2 {
+                font-size: 2rem;
+            }
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+            .nav-link {
+                font-size: 1rem;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Sai Sri Harsha Reddy Kapuluru</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div data-aos="fade-up">
+                <h1>Sai Sri Harsha Reddy Kapuluru</h1>
+                <p>Aspiring Artificial Intelligence Engineer | Dublin, Ireland</p>
+                <a href="#about" class="btn btn-primary">Explore My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 data-aos="fade-up">About Me</h2>
+            <div class="row">
+                <div class="col-md-8 offset-md-2" data-aos="fade-up" data-aos-delay="100">
+                    <p>Hello There!!, I’m Sai Sri Harsha Reddy Kapuluru, an aspiring AI Engineer currently pursuing my MSc in Computing with Artificial Intelligence at Dublin City University, Ireland. I am passionate about building innovative solutions using Artificial Intelligence, Machine Learning, Generative AI, and Automation to create meaningful human–AI collaboration. My journey blends strong technical expertise, continuous learning, and a drive to turn ideas into impactful, intelligent systems.</p>
+                    <p>Over the years, I’ve developed an in-depth understanding of AI-powered chatbots, automation systems, and data-driven applications. My technical strengths include Python, TensorFlow, Scikit-learn, Hugging Face Transformers, OpenCV, Flask, Streamlit, Power BI, and more. I enjoy solving complex problems through creative and analytical thinking, and I believe that technology is most powerful when it simplifies life.</p>
+                    <h3>Professional Experience</h3>
+                    <p><strong>AI Engineer Intern – Wipro Limited (Apr 2025 – Aug 2025)</strong></p>
+                    <ul>
+                        <li>Developed Rome/ConnectWeb Advisor Chatbot, an intelligent conversational system for client support.</li>
+                        <li>Created Employee Finder, an AI-powered internal search tool to simplify employee data retrieval.</li>
+                        <li>Designed SmartDocs Assistant, a Retrieval-Augmented Generation (RAG) chatbot to interact with business documents.</li>
+                        <li>Implemented MailMate, an AI-driven Outlook assistant that automates email replies for productivity.</li>
+                    </ul>
+                    <p><strong>Store Assistant – SuperValu, Dublin (Part-Time, 2025)</strong></p>
+                    <ul>
+                        <li>Assisted customers with purchases, returns, and product inquiries.</li>
+                        <li>Managed inventory and maintained organized store displays.</li>
+                        <li>Supported operations during peak hours to ensure seamless service.</li>
+                    </ul>
+                    <p><strong>Warehouse Associate – Tesco, Dublin (Part-Time, 2025)</strong></p>
+                    <ul>
+                        <li>Performed inventory management, order preparation, and quality checks.</li>
+                        <li>Coordinated with logistics teams for timely product dispatch.</li>
+                        <li>Maintained precision and efficiency under time constraints.</li>
+                    </ul>
+                    <h3>Academic Projects</h3>
+                    <p><strong>Segmentation of Brain Tumor Cells in 3D using XLSTM and U-Net:</strong> Designed a hybrid deep learning model for accurate tumor segmentation in medical imaging.</p>
+                    <p><strong>Neural Style Transfer using TensorFlow:</strong> Integrated deep learning and artistic transformation to generate stylized digital art.</p>
+                    <p><strong>Voice-Controlled Car:</strong> Built a voice-activated IoT car prototype using Python and sensor integration.</p>
+                    <p><strong>Coronavirus Disease Detection:</strong> Created an ML-based diagnostic tool to identify COVID-19 from X-ray images.</p>
+                    <p><strong>AI-Powered Resume Screener:</strong> Designed an NLP-based automation model to rank and classify job applications efficiently.</p>
+                    <p><strong>E-Commerce Product Recommender:</strong> Built a collaborative filtering system to personalize shopping experiences.</p>
+                    <p><strong>AI Chatbot for Education Support:</strong> Developed a question-answering chatbot using transformer models to assist students with academic queries.</p>
+                    <h3>Certifications and Training</h3>
+                    <ul>
+                        <li>Introduction to Artificial Intelligence</li>
+                        <li>Introduction to Machine Learning</li>
+                        <li>Google AI Essentials</li>
+                        <li>Explore Machine Learning using Python</li>
+                        <li>Introduction to Prompt Engineering for Generative AI</li>
+                        <li>Career Essentials in Generative AI (Microsoft & LinkedIn)</li>
+                        <li>Generative AI Productivity Skills (Microsoft & LinkedIn)</li>
+                        <li>Learning Microsoft 365 Copilot</li>
+                        <li>Techniques for Big Data Analytics</li>
+                        <li>AI for Entrepreneurship (Intel Technologies, Skill India Digital Hub)</li>
+                    </ul>
+                    <h3>Activities & Achievements</h3>
+                    <ul>
+                        <li>Conducted literature surveys and delivered presentations on AI in Healthcare and Deep Learning Models at Dayananda Sagar University.</li>
+                        <li>Participated in university innovation programs focused on AI and automation.</li>
+                        <li>Served as a student mentor, assisting peers in learning Generative AI concepts.</li>
+                        <li>Recognized for academic consistency, innovation, and teamwork.</li>
+                        <li>Volunteered at community events and technical workshops to promote AI awareness.</li>
+                    </ul>
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Strong communication, problem-solving, and collaboration abilities.</li>
+                        <li>Highly adaptable, organized, and capable of balancing multiple priorities.</li>
+                        <li>Thriving in dynamic, cross-functional teams due to enhanced leadership, empathy, and cultural awareness.</li>
+                    </ul>
+                    <h3>Career Vision</h3>
+                    <p>I aspire to bridge the gap between AI research and practical implementation, contributing to innovative projects that impact lives positively. My long-term vision is to become a leading AI Solution Architect, specializing in automation, data-driven intelligence, and human–AI interaction systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-light">
+        <div class="container">
+            <h2 data-aos="fade-up">Projects & Experience</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-brain me-2"></i> Brain Tumor Segmentation</h5>
+                            <p class="card-text">Designed a hybrid deep learning model using XLSTM and U-Net for accurate tumor segmentation in 3D medical imaging.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-paint-brush me-2"></i> Neural Style Transfer</h5>
+                            <p class="card-text">Integrated deep learning and artistic transformation to generate stylized digital art using TensorFlow.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-car me-2"></i> Voice-Controlled Car</h5>
+                            <p class="card-text">Built a voice-activated IoT car prototype using Python and sensor integration.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-lungs-virus me-2"></i> COVID-19 Detection</h5>
+                            <p class="card-text">Created an ML-based diagnostic tool to identify COVID-19 from X-ray images.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-robot me-2"></i> AI Chatbot for HR</h5>
+                            <p class="card-text">Built a generative AI chatbot to manage HR FAQs and reduce manual intervention.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 data-aos="fade-up">Contact Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <p><strong>Email:</strong> saisriharshareddyk@gmail.com</p>
+                    <p><strong>Phone:</strong> +353 89 958 0982</p>
+                    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/sai-sri-harsha-reddy-k-9090b0260" target="_blank">linkedin.com/in/sai-sri-harsha-reddy-k</a></p>
+                    <p><strong>Location:</strong> Dublin, Ireland</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sai Sri Harsha Reddy Kapuluru. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/sai-sri-harsha-reddy-kapuluru" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/saisriharshareddyk" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:saisriharshareddyk@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
